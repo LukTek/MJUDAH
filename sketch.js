@@ -42,6 +42,7 @@ function draw() {
   
   if(wheretfismariojudah){
   im.save(seperate[x], 'png')
+  window.open('https://blackwattle.sentral.com.au/portal/dashboard')
   x++
   }
 
