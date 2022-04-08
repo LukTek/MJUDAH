@@ -1,5 +1,7 @@
 function preload(){
   im = loadImage('mario.jpeg')
+  myFont = loadFont('RubikWetPaint-Regular.ttf')
+  song = loadSound('DVR.mp3')
 }
   
 let wheretfismariojudah = false
@@ -9,40 +11,51 @@ const lyrics = "I'm a big dog, big bear, fella, I'm a lion I'm the predator of t
 const seperate = lyrics.split(' ')
 console.log(seperate)
 
+
 let x = 0
 
 
 
   function setup() {
   createCanvas(windowWidth, windowHeight);
+    textFont(myFont)
 
 
 }
 
 function draw() {
+  if(wheretfismariojudah){
+    background(getRndInteger(0, 255), 0, 0);
+  } else{
   background(0);
+  }
   rectMode(CENTER)
   
   
   textAlign(CENTER)
   if(mouseX>width/2-150 && mouseX<width/2+150 && mouseY<height/2+50 && mouseY>height/2-50){
     fill('#374A67')
-    textSize(80)
+    textSize(50)
     rect(width/2, height/2, 310, 110, 100)
-    fill(255)
-    text('?',width/2, height/2+20)
+    fill('#ac0404')
+    text('I DARE YOU',width/2, height/2+20)
   } else{
     fill('#374A67')
-    textSize(60)
+    textSize(50)
     rect(width/2, height/2, 300, 100, 100)
-    fill(255)
-    text('!',width/2, height/2+20)
+    fill('#ac0404')
+    text('PRESS ME',width/2, height/2+20)
   }
   
   
   if(wheretfismariojudah){
+  if(false){
   im.save(seperate[x], 'png')
-  window.open('https://blackwattle.sentral.com.au/portal/dashboard')
+  }
+    
+  if(x===0){
+  song.play()
+  }
 
   
   x++
@@ -56,4 +69,10 @@ function mouseClicked(){
   if(mouseX>width/2-150 && mouseX<width/2+150 && mouseY<height/2+50 && mouseY>height/2-50){
     wheretfismariojudah = true
   }
+}
+
+
+
+function getRndInteger(min, max) {
+    return Math.floor(random(min, max)) + min;
 }
