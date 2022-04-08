@@ -1,7 +1,7 @@
 function preload(){
   im = loadImage('mario.jpeg')
   myFont = loadFont('RubikWetPaint-Regular.ttf')
-  song = loadSound('yt1s.com - Mario Judah Die Very Rough Shot by OneRoomMedia.mp3')
+  song = loadSound('DVR.mp3')
 }
   
 let wheretfismariojudah = false
