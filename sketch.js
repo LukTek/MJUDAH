@@ -49,9 +49,9 @@ function draw() {
   
   
   if(wheretfismariojudah){
-  if(false){
+
   im.save(seperate[x], 'png')
-  }
+
     
   if(x===0){
   song.play()
